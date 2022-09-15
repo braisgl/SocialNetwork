@@ -1,17 +1,20 @@
 public class CommandManager {
 
 
-    public String execute(String command) {
+    public Command getCommand(String command) {
         if (command.equals("Irene")) {
-            return "Reading";
+            return new Reading();
         }
         if (command.equals("Irene follows Tim_T")) {
-            return "Following";
+            return new Following();
+//            return "Following";
         }
         if (command.equals("Brais wall")) {
-            return "Showing wall";
+            return new Showing();
+//            return "Showing wall";
         }
+        return new Posting();
+//        return "Posting";
 
-        return "Posting";
     }
 }
