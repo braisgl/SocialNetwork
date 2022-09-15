@@ -19,5 +19,18 @@ public class SocialNetworkShould {
         Assertions.assertEquals("Reading",socialNetwork.execute(command));
     }
 
+    @Test
+    void follow(){
+        String command = "Irene follows Tim_T";
+        socialNetwork = new SocialNetwork();
+        Assertions.assertEquals("Following",socialNetwork.execute(command));
+    }
+
+    @Test
+    void wall(){
+        String command = "Brais wall";
+        socialNetwork = new SocialNetwork();
+        Assertions.assertEquals("Showing wall",socialNetwork.execute(command));
+    }
 
 }
